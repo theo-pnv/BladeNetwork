@@ -33,8 +33,17 @@ It is a delegate called each time the server received a new message.
 
     private void HandleReceive(object sender, ClientConnectionEventArgs e)
     {
-      // Access the message by : (will soon be replaced by a true serialisation...)
-      string[] substrings = e.clientConnection.Queue.Data.Dequeue().Split('|');
+      // Access the message by :
+      string[] substrings = e.clientConnection.Queue.Data.Dequeue();
+    }
+
+To send messages, you'll need a `Msg` variable :
+
+    using Msg = Tuple<ClientConnection, string>;
+    
+    private void Send(Msg msg)
+    {
+      server.AsyncSend(msg.Item1.Client.GetStream(), msg.Item2);
     }
 
 ### Client
@@ -43,7 +52,10 @@ You must make the Client class inherit from `blade.AClient` :
     public class HelloWorldClient : blade.AClient
     {
       public HelloWorldClient(string ip, int port) : base(ip, port)
-      { }
+      {
+        // Example of sending a message
+        Send("Hello from a client !");
+      }
 
       // Mandatory to implement
       public override void ReceiveHandler(object sender, QueueEventArgs e)
