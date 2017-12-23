@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
 
-namespace blade
+namespace VRC.Common.Networking
 {
 	public class ClientConnectionEventArgs : EventArgs
 	{
@@ -19,17 +19,11 @@ namespace blade
 	/// </summary>
 	public class ClientConnection
 	{
-
 		TcpClient client;
 		Queue queue;
 		public event EventHandler<ClientConnectionEventArgs> e;
 
-		public ClientConnection(TcpClient c, Queue q)
-		{
-			client = c;
-			queue = q;
-			queue.e += OnNewMsg;
-		}
+		#region Accessors
 
 		public TcpClient Client
 		{
@@ -39,6 +33,15 @@ namespace blade
 		public Queue Queue
 		{
 			get { return queue; }
+		}
+
+		#endregion
+
+		public ClientConnection(TcpClient c, Queue q)
+		{
+			client = c;
+			queue = q;
+			queue.e += OnNewMsg;
 		}
 
 		public void OnNewMsg(object sender, QueueEventArgs eventArgs)

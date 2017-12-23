@@ -4,10 +4,10 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace blade
+namespace VRC.Common.Networking
 {
 	/// <summary>
-	/// Implementation of basic methods to send and receive messages through a TCP base communication.
+	/// Implementation of basic methods to send and receive messages through a TCP based communication.
 	/// This is the base class, used for the server as well as for the client.
 	/// Communication is done asynchronously.
 	/// A queue is filled with received messages for subsequent processing.

@@ -4,11 +4,10 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 
-namespace blade
+namespace VRC.Common.Networking
 {
 	/// <summary>
-	/// Server class. The object which accepts clients and interacts with them
-	/// should inherit from it.
+	/// Server class.
 	/// </summary>
 	public class Server : ATcpObject
 	{

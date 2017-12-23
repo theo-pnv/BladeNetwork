@@ -1,18 +1,18 @@
 ﻿using System.Diagnostics;
 using System.Net.Sockets;
 
-namespace blade
+namespace VRC.Common.Networking
 {
 
 	/// <summary>
 	/// This is the client class.
 	/// </summary>
-	public class Client : ATcpObject
+	public class NetworkingClient : ATcpObject
 	{
 		TcpClient client;
 		NetworkStream stream;
 
-		public Client(string ip, int port, Queue queue) :
+		public NetworkingClient(string ip, int port, Queue queue) :
 			base()
 		{
 			client = new TcpClient(ip, port);
@@ -27,7 +27,7 @@ namespace blade
 			AsyncSend(stream, msg);
 		}
 
-		~Client()
+		~NetworkingClient()
 		{
 			stream.Close();
 			client.Close();

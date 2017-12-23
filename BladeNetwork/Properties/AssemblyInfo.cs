@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BladeNetwork")]
+[assembly: AssemblyTitle("BladeNetwork.NET")]
 [assembly: AssemblyDescription("A simple and lightweight C# asynchronous networking library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("theo-pnv")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b9fce98e-a800-4a04-be23-4a8fbf4fd91c")]
+[assembly: Guid("83ad393f-46f8-45bf-9636-d523252521fc")]
 
 // Version information for an assembly consists of the following four values:
 //
