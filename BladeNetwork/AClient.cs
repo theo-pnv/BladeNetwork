@@ -1,4 +1,4 @@
-﻿namespace VRC.Common.Networking
+﻿namespace blade
 {
 	/// <summary>
 	/// Abstract class representing a client.

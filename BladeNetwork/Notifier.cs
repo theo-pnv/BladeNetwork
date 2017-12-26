@@ -1,4 +1,4 @@
-﻿namespace VRC.Common.Networking
+﻿namespace blade
 {
 	public class Notifier<Args>
 	{

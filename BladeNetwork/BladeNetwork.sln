@@ -5,16 +5,40 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BladeNetwork", "BladeNetwork.csproj", "{98664334-CAB1-462C-8040-4F6DD152EAF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BladeServer", "..\BladeServer\BladeServer\BladeServer.csproj", "{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BladeClient", "..\BladeClient\BladeClient\BladeClient.csproj", "{0B131999-720E-4889-8A1C-7944FA46D32E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98664334-CAB1-462C-8040-4F6DD152EAF5}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{98664334-CAB1-462C-8040-4F6DD152EAF5}.Debug|x86.ActiveCfg = Debug|x86
 		{98664334-CAB1-462C-8040-4F6DD152EAF5}.Debug|x86.Build.0 = Debug|x86
+		{98664334-CAB1-462C-8040-4F6DD152EAF5}.Release|Any CPU.ActiveCfg = Release|x86
 		{98664334-CAB1-462C-8040-4F6DD152EAF5}.Release|x86.ActiveCfg = Release|x86
 		{98664334-CAB1-462C-8040-4F6DD152EAF5}.Release|x86.Build.0 = Release|x86
+		{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}.Release|x86.Build.0 = Release|Any CPU
+		{0B131999-720E-4889-8A1C-7944FA46D32E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B131999-720E-4889-8A1C-7944FA46D32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B131999-720E-4889-8A1C-7944FA46D32E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B131999-720E-4889-8A1C-7944FA46D32E}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B131999-720E-4889-8A1C-7944FA46D32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B131999-720E-4889-8A1C-7944FA46D32E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B131999-720E-4889-8A1C-7944FA46D32E}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B131999-720E-4889-8A1C-7944FA46D32E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

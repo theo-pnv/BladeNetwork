@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Net.Sockets;
 
-namespace VRC.Common.Networking
+namespace blade
 {
 
 	/// <summary>

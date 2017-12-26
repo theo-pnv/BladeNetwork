@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace VRC.Common.Networking
+namespace blade
 {
 	/// <summary>
 	/// Implementation of basic methods to send and receive messages through a TCP based communication.

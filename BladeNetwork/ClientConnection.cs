@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
 
-namespace VRC.Common.Networking
+namespace blade
 {
 	public class ClientConnectionEventArgs : EventArgs
 	{

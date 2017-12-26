@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VRC.Common.Networking
+namespace blade
 {
 
 	public class QueueEventArgs : EventArgs
