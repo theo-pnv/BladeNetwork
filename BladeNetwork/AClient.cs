@@ -14,7 +14,7 @@
 		public AClient(string ip, int port)
 		{
 			queue = new Queue();
-			queue.e += ReceiveHandler;
+			queue.e += MsgHandler;
 			client = new NetworkingClient(ip, port, queue);
 		}
 
@@ -34,6 +34,6 @@
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		public abstract void ReceiveHandler(object sender, QueueEventArgs e);
+		public abstract void MsgHandler(object sender, QueueEventArgs e);
 	}
 }

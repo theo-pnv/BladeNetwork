@@ -77,6 +77,11 @@ namespace blade
 			BeginReadSize(state._stream, state._queue);
 		}
 
+        public void Send(ClientConnection clientConnection, string msg)
+        {
+            AsyncSend(clientConnection.Client.GetStream(), msg);
+        }
+
 		public List<ClientConnection> ConnectionList
 		{
 			get

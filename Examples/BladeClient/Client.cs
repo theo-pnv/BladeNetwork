@@ -16,7 +16,7 @@ namespace BladeClient
             DoSomething();
         }
 
-        public override void ReceiveHandler(object sender, QueueEventArgs e)
+        public override void MsgHandler(object sender, QueueEventArgs e)
         {
             string receivedMsg = queue.Data.Dequeue();
 
@@ -40,7 +40,7 @@ namespace BladeClient
                 else
                 {
                     Send(input);
-                    Console.WriteLine("Client sent \"{0}\" to server");
+                    Console.WriteLine("Client sent \"{0}\" to server", input);
                 }
             }
         }

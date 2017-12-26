@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BladeNetwork", "BladeNetwork.csproj", "{98664334-CAB1-462C-8040-4F6DD152EAF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BladeServer", "..\BladeServer\BladeServer\BladeServer.csproj", "{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BladeServer", "..\Examples\BladeServer\BladeServer.csproj", "{6151D5DE-DFF8-440C-900C-B04CFFDAA1ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BladeClient", "..\BladeClient\BladeClient\BladeClient.csproj", "{0B131999-720E-4889-8A1C-7944FA46D32E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BladeClient", "..\Examples\BladeClient\BladeClient.csproj", "{0B131999-720E-4889-8A1C-7944FA46D32E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

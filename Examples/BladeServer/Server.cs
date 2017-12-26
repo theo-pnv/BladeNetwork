@@ -15,12 +15,12 @@ namespace BladeServer
             string ip = "127.0.0.1";
             int port = 4242;
 
-            _server = new blade.Server(ip, port, HandleReceive);
+            _server = new blade.Server(ip, port, MsgHandler);
 
             DoSomething();
         }
 
-        private void HandleReceive(object sender, blade.ClientConnectionEventArgs e)
+        private void MsgHandler(object sender, blade.ClientConnectionEventArgs e)
         {
             string receivedMsg = e.clientConnection.Queue.Data.Dequeue();
 
@@ -46,10 +46,8 @@ namespace BladeServer
                     if (_clientConnection == null) {
                         Console.WriteLine("Please start a client");
                     } else {
-                        Msg msg = new Msg(_clientConnection, input);
-
-                        _server.AsyncSend(msg.Item1.Client.GetStream(), msg.Item2);
-                        Console.WriteLine("Server sent \"{0}\" to client");
+                        _server.Send(_clientConnection, input);
+                        Console.WriteLine("Server sent \"{0}\" to client", input);
                     }
 
                 }
