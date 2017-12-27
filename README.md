@@ -20,5 +20,37 @@ It is named after a famous SF classic, because it is as strong and reliable as r
 
 ## Getting started
 
-There is a complete & documented example available in the `Example` directory.
+There is a complete & well-documented example available in the `Examples` directory.
 It shows a very basic implementation of a running server and associated client.
+
+### Server-side [(Example)](Examples/BladeServer/Server.cs)
+
+**Initialization:**
+
+    var server = new blade.Server(ip, port, MsgHandler);
+
+**Send messages:**
+
+    Send(target, "Hello from server !");
+
+**Receive messages:**
+
+Implement the `MsgHandler` function : it will be called each time a message is received by the server.
+You can then parse it there.
+
+### Client-side [(Example)](Examples/BladeClient/Client.cs)
+
+**Initialization:**
+
+Make your client class inherit from blade.AClient and send it an ip and port.
+
+**Send messages:**
+
+    Send("Hello from client !");
+
+**Receive messages:**
+
+Implement the `MsgHandler` function : it will be called each time a message is received by the server.
+You can then parse it there.
+
+It's as simple as that !
