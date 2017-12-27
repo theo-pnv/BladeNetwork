@@ -29,8 +29,8 @@ namespace blade
 
 		~NetworkingClient()
 		{
-			stream.Close();
-			client.Close();
+            stream?.Close();
+            client?.Close();
 		}
 
 	}

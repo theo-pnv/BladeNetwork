@@ -10,7 +10,15 @@ namespace BladeClient
     {
         static void Main(string[] args)
         {
-            var client = new Client();
+            try
+            {
+                var client = new Client();
+            } catch (Exception) {
+                Console.WriteLine("Start a server before this client. Type something to quit");
+
+                ConsoleKeyInfo input = Console.ReadKey();
+                System.Environment.Exit(1);
+            }
         }
     }
 }
