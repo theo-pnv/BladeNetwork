@@ -10,13 +10,17 @@ namespace BladeClient
     /// <summary>
     /// Your business class, acting as the client
     /// </summary>
-    class Client : blade.AClient
+    class Client
     {
-        public Client() :
-            base("127.0.0.1", 4242)
+        // Variable holding the blade Client.
+        blade.Client _client;
+
+        public Client()
         {
+            _client = new blade.Client("127.0.0.1", 4242, MsgHandler);
+
             // Send a ping to the server allows it to register this client and to send it messages.
-            Send("CONNECT");
+            _client.Send("CONNECT");
             DoSomething();
         }
 
@@ -26,9 +30,9 @@ namespace BladeClient
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public override void MsgHandler(object sender, QueueEventArgs e)
+        public void MsgHandler(object sender, QueueEventArgs e)
         {
-            string receivedMsg = queue.Data.Dequeue();
+            string receivedMsg = _client.Queue.Data.Dequeue();
 
             Console.WriteLine("Client received: {0}", receivedMsg);
         }
@@ -50,13 +54,13 @@ namespace BladeClient
                 if (input.Equals("QUIT"))
                 {
                     // Let the server know you're off
-                    Send("DISCONNECT");
+                    _client.Send("DISCONNECT");
                     System.Environment.Exit(0);
                 }
                 else
                 {
                     // Will send a message directly to the server
-                    Send(input);
+                    _client.Send(input);
                     Console.WriteLine("Client sent \"{0}\" to server", input);
                 }
             }

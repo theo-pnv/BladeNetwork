@@ -31,7 +31,7 @@ It shows a very basic implementation of a running server and associated client.
 
 **Send messages:**
 
-    Send(target, "Hello from server !");
+    server.Send(target, "Hello from server !");
 
 **Receive messages:**
 
@@ -42,11 +42,11 @@ You can then parse it there.
 
 **Initialization:**
 
-Make your client class inherit from blade.AClient and send it an ip and port.
+    var client = new blade.Client(ip, port, MsgHandler);
 
 **Send messages:**
 
-    Send("Hello from client !");
+    client.Send("Hello from client !");
 
 **Receive messages:**
 
