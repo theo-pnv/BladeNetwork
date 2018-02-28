@@ -16,7 +16,7 @@ namespace BladeServer
         public Server()
         {
             string ip = "127.0.0.1";
-            int port = 4242;
+            int port = 1971;
 
             // Instantiating the blade server. DO NOT forget the MsgHandler
             _server = new blade.Server(ip, port, MsgHandler);

@@ -17,7 +17,7 @@ namespace BladeClient
 
         public Client()
         {
-            _client = new blade.Client("127.0.0.1", 4242, MsgHandler);
+            _client = new blade.Client("127.0.0.1", 1971, MsgHandler);
 
             // Send a ping to the server allows it to register this client and to send it messages.
             _client.Send("CONNECT");
